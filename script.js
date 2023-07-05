@@ -42,7 +42,7 @@ function setMiniMenu() {
                 };
                 if (window.innerWidth <= 600) {
                     //console.log("SMALL screen");
-                    mobimenu[j].style.display = "none";
+                    mobimenu[j].style.display = "block";
                 };
             };
             ankor.classList.toggle("active");
@@ -74,7 +74,7 @@ function showHideMobiMenu() {
     } else {
         minimenu.style.display = "none";
         for (j = 0; j < mobimenu.length; j++) {
-            mobimenu[j].style.display = "block";
+            mobimenu[j].style.display = "flex";
         };
         //console.log("BIG screen");
         starman.style.marginTop = "100px";

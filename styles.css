@@ -16,17 +16,24 @@ body {
 }
 
 div.navigation {
-    display: flex;
-    justify-content: center;
-    flex-direction: row;
-    margin: 0px;
-        width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    justify-self: stretch;
+    width: 100%;
+    max-width: 920px;
 }
 
 div.nav-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     padding: 10px 20px;
     margin: 0px;
     background-color: #108010;
+    border-right: 1px solid white;
+}
+div.nav-item:last-of-type {
+    border-right: 0;
 }
 
 div.mini-menu {
@@ -79,39 +86,18 @@ h3 {
     font-weight: normal;
     text-align: center;
     padding: 2px;
-    margin: 0px 20px;
+    margin: 10px 20px;
 }
 
 .allcontent {
-    display: flex;
-    justify-content: center;
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-items: center;
 }
 
 .incontent {
-    display: block;
     width: 100%;
     max-width: 960px;
-}
-
-p.mainpa {
-    font-size: 22px;
-    padding: 5px 20px;
-}
-
-p.mainpai {
-    font-size: 22px;
-    font-style: italic;
-    text-align: right;
-    padding: 5px 20px;
-}
-
-
-span.area-4:hover {
-  text-shadow:
-    0.3px -0.1px 0.1px rgb(255,0,0),
-    0.2px 0.1px 0 rgb(0,255,0),
-    -0.1px 0.2px 0 rgb(0,0,255);
-  transition: 0.2s cubic-bezier(0.5,200,0.5,-200);
 }
 
 .buggy-1 {
@@ -133,19 +119,6 @@ span.area-4:hover {
   transition-timing-function: cubic-bezier(0.5,-300,0.5,300);
  }
 
-.morphing-1 {
-   box-shadow: 0 0 0px 80px var(--c,#0000);
-   background: var(--c,#c0f0c0);
-   transition: 0.3s, clip-path 0s;
-   clip-path: polygon(0 0,100% 0,100% 100%,0 100%);
- }
-
-.morphing-1:hover {
-  --c:#c0f0c0;
-  color: #c0f0c0;
-  transition: 0.3s, clip-path cubic-bezier(.5,150,.5,-150) 0.4s 0.3s;
-  clip-path: polygon(0.5px 0,calc(100% + 0.5px) 0,calc(100% - 0.5px) 100%,-0.5px 100%);
- }
 .starman {
   margin: 100px 0px 0px 0px;
   width: 200px;
@@ -165,7 +138,7 @@ span.area-4:hover {
     border: none;
     text-align: left;
     outline: none;
-    font-size: 15px;
+    font-size: 20px;
 }
 
 button.collapsible:hover {
@@ -349,18 +322,25 @@ a.con-item:hover {
 
 /* Media queries - Responsive timeline on screens less than 600px wide */
 @media screen and (max-width: 600px) {
+    .starman {
+        margin-top: 230px;
+    }
     div.navigation {
-        flex-direction: column;
+        grid-template-columns: 1fr;
     }
     div.nav-item {
-        display: none;
+        //display: none;
+        display: block;
+        border-right: 0;
         border-bottom: solid 1px white;
     }
+
     div.nav-item.active {
         border-bottom: solid 1px #108010;
     }
     div.mini-menu {
-        display: block;
+        display: none;
+        //display: block;
     }
     h2 {
         font-size: 24px;
@@ -370,6 +350,7 @@ a.con-item:hover {
         max-width: 530px;
     }
     .collapsible {
+        font-size: 16px;
         max-width: 530px;
         }
     .collcontent {
