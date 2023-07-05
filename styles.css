@@ -323,7 +323,7 @@ a.con-item:hover {
 /* Media queries - Responsive timeline on screens less than 600px wide */
 @media screen and (max-width: 600px) {
     .starman {
-        margin-top: 230px;
+        //margin-top: 230px;
     }
     div.navigation {
         grid-template-columns: 1fr;
