@@ -1,0 +1,413 @@
+body {
+    margin: 0px;
+    font-family: sans-serif;
+    background-color: #c0f0c0;
+}
+
+.header {
+    display: flex;
+    justify-content: center;
+    background-color: #80f080;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+}
+
+div.navigation {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    margin: 0px;
+        width: 100%;
+}
+
+div.nav-item {
+    padding: 10px 20px;
+    margin: 0px;
+    background-color: #108010;
+}
+
+div.mini-menu {
+    display: none;
+    cursor: pointer;
+    font-size: 20px;
+    color: white;
+    padding: 10px 20px;
+    margin: 0px;
+    background-color: #108010;
+}
+
+div.nav-item > a.a-item {
+    font-size: 20px;
+    color: white;
+    padding: 0px 0px;
+    margin: 0px;
+    text-decoration: none;
+}
+div.nav-item > a.a-item.active {
+    color: #108010;
+}
+
+div.nav-item:hover {
+    background-color: #10b010;
+}
+
+div.nav-item.active {
+    padding: 10px 20px;
+    margin: 0px;
+    color: #108010;
+    font-size: 20px;
+    background-color: #c0f0c0;
+}
+
+h1 {
+    font-size: 30px;
+    margin: 0px 10px;
+}
+
+h2 {
+    font-size: 30px;
+    text-align: center;
+    padding: 10px;
+    margin: 45px 20px 0px 20px;
+}
+
+h3 {
+    font-size: 18px;
+    font-weight: normal;
+    text-align: center;
+    padding: 2px;
+    margin: 0px 20px;
+}
+
+.allcontent {
+    display: flex;
+    justify-content: center;
+}
+
+.incontent {
+    display: block;
+    width: 100%;
+    max-width: 960px;
+}
+
+p.mainpa {
+    font-size: 22px;
+    padding: 5px 20px;
+}
+
+p.mainpai {
+    font-size: 22px;
+    font-style: italic;
+    text-align: right;
+    padding: 5px 20px;
+}
+
+
+span.area-4:hover {
+  text-shadow:
+    0.3px -0.1px 0.1px rgb(255,0,0),
+    0.2px 0.1px 0 rgb(0,255,0),
+    -0.1px 0.2px 0 rgb(0,0,255);
+  transition: 0.2s cubic-bezier(0.5,200,0.5,-200);
+}
+
+.buggy-1 {
+  font-family: sans-serif;
+  position: relative;
+  left: 0px;
+  bottom: 0px;
+  top: 0px;
+}
+
+.buggy-1:hover {
+   left: 0.1px;
+   transform: translateY(0.1px);
+   top: 0.1px;
+   transition:
+      left      0.2s,
+      top       0.2s 0.2s,
+      transform 0.2s 0.4s;
+  transition-timing-function: cubic-bezier(0.5,-300,0.5,300);
+ }
+
+.morphing-1 {
+   box-shadow: 0 0 0px 80px var(--c,#0000);
+   background: var(--c,#c0f0c0);
+   transition: 0.3s, clip-path 0s;
+   clip-path: polygon(0 0,100% 0,100% 100%,0 100%);
+ }
+
+.morphing-1:hover {
+  --c:#c0f0c0;
+  color: #c0f0c0;
+  transition: 0.3s, clip-path cubic-bezier(.5,150,.5,-150) 0.4s 0.3s;
+  clip-path: polygon(0.5px 0,calc(100% + 0.5px) 0,calc(100% - 0.5px) 100%,-0.5px 100%);
+ }
+.starman {
+  margin: 100px 0px 0px 0px;
+  width: 200px;
+  justify-content: center;
+  aspect-ratio: 1;
+  clip-path: polygon(100.00% 50.00%,91.80% 54.12%,99.04% 59.75%,90.19% 62.19%,96.19% 69.13%,87.04% 69.80%,91.57% 77.78%,82.47% 76.64%,85.36% 85.36%,76.64% 82.47%,77.78% 91.57%,69.80% 87.04%,69.13% 96.19%,62.19% 90.19%,59.75% 99.04%,54.12% 91.80%,50.00% 100.00%,45.88% 91.80%,40.25% 99.04%,37.81% 90.19%,30.87% 96.19%,30.20% 87.04%,22.22% 91.57%,23.36% 82.47%,14.64% 85.36%,17.53% 76.64%,8.43% 77.78%,12.96% 69.80%,3.81% 69.13%,9.81% 62.19%,0.96% 59.75%,8.20% 54.12%,0.00% 50.00%,8.20% 45.88%,0.96% 40.25%,9.81% 37.81%,3.81% 30.87%,12.96% 30.20%,8.43% 22.22%,17.53% 23.36%,14.64% 14.64%,23.36% 17.53%,22.22% 8.43%,30.20% 12.96%,30.87% 3.81%,37.81% 9.81%,40.25% 0.96%,45.88% 8.20%,50.00% 0.00%,54.12% 8.20%,59.75% 0.96%,62.19% 9.81%,69.13% 3.81%,69.80% 12.96%,77.78% 8.43%,76.64% 17.53%,85.36% 14.64%,82.47% 23.36%,91.57% 22.22%,87.04% 30.20%,96.19% 30.87%,90.19% 37.81%,99.04% 40.25%,91.80% 45.88%);
+}
+
+.collapsible {
+    background-color: #108010;
+    color: #fff;
+    cursor: pointer;
+    padding: 18px;
+    margin: 0px 20px;
+    width: calc(100% - 40px);
+    max-width: 920px;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+}
+
+button.collapsible:hover {
+    background-color: #10b010;
+}
+
+button.active {
+    background-color: #10b010;
+}
+
+button.collapsible:after {
+    content: '\002B';
+    color: white;
+    font-weight: bold;
+    float: right;
+    margin-left: 5px;
+}
+
+button.collapsible.active:after {
+    content: "\2212";
+}
+
+/* Style the collapsible content. Note: hidden by default */
+.collcontent {
+    padding: 0 18px;
+    margin: 0px 20px 0px 20px;
+    width: 100%;
+    width: calc(100% - 40px);
+    display: none;
+    overflow: hidden;
+    background-color: #f1f1f1;
+}
+
+/* Make sure that padding behaves as expected */
+* {
+    box-sizing: border-box;
+}
+/* Container for skill bars */
+.skillcontainer {
+    margin: 0px 20px 0px 20px;
+    width: 100%;
+    width: calc(100% - 40px);
+    background-color: #fff;
+}
+
+.skills {
+    text-align: right; /* Right-align text */
+    padding-top: 10px; /* Add top padding */
+    padding-right: 20px;
+    padding-bottom: 10px; /* Add bottom padding */
+    color: white; /* White text color */
+}
+p.skillname {
+    padding-left: 20px;
+}
+
+.python {width: 90%; background-color: #108010;}
+.html {width: 90%; background-color: #04AA6D;} /* Green */
+.css {width: 80%; background-color: #2196F3;} /* Blue */
+.js {width: 60%; background-color: #f44336;} /* Red */
+.php {width: 50%; background-color: #808080;} /* Dark Grey */
+
+
+/* The actual timeline (the vertical ruler) */
+.timeline {
+    position: relative;
+    margin: 0 auto;
+    padding-top: 30px;
+}
+
+/* The actual timeline (the vertical ruler) */
+.timeline::after {
+    content: '';
+    position: absolute;
+    width: 4px;
+    background-color: white;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -3px;
+}
+
+.containertime {
+    padding: 10px 40px;
+    position: relative;
+    background-color: inherit;
+    width: 50%;
+}
+
+.containertime::after {
+    content: '';
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    right: -15px;
+    background-color: white;
+    border: 4px solid #108010;
+    top: 15px;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.timeleft {
+  left: 0;
+}
+
+.timeright {
+  left: 50%;
+}
+
+.timeleft::before {
+    content: " ";
+    height: 0;
+    position: absolute;
+    top: 22px;
+    width: 0;
+    z-index: 1;
+    right: 30px;
+    border: medium solid white;
+    border-width: 10px 0 10px 10px;
+    border-color: transparent transparent transparent white;
+}
+
+/* Add arrows to the right container (pointing left) */
+.timeright::before {
+    content: " ";
+    height: 0;
+    position: absolute;
+    top: 22px;
+    width: 0;
+    z-index: 1;
+    left: 30px;
+    border: medium solid white;
+    border-width: 10px 10px 10px 0;
+    border-color: transparent white transparent transparent;
+}
+
+/* Fix the circle for containers on the right side */
+.timeright::after {
+    left: -18px;
+}
+
+/* The actual content */
+.timecontent {
+    padding: 20px 30px;
+    background-color: white;
+    position: relative;
+    border-radius: 6px;
+}
+h4.year {
+    font-weight: normal;
+    font-size: 24px;
+    text-align: left;
+    padding: 0px;
+    margin: 0px;
+}
+
+div.contacts {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    margin: 0px 20px 20px 20px;
+}
+
+div.contacts-item {
+    font-size: 18px;
+    padding: 5px 20px;
+    text-align: center;
+    color: blue;
+}
+
+a.con-item {
+    text-decoration: none;
+    text-decoration-color: red;
+    color: blue;
+}
+
+a.con-item:hover {
+    color: red;
+}
+
+/* Media queries - Responsive timeline on screens less than 600px wide */
+@media screen and (max-width: 600px) {
+    div.navigation {
+        flex-direction: column;
+    }
+    div.nav-item {
+        display: none;
+        border-bottom: solid 1px white;
+    }
+    div.nav-item.active {
+        border-bottom: solid 1px #108010;
+    }
+    div.mini-menu {
+        display: block;
+    }
+    h2 {
+        font-size: 24px;
+        max-width: 530px;
+        }
+    h3 {
+        max-width: 530px;
+    }
+    .collapsible {
+        max-width: 530px;
+        }
+    .collcontent {
+        max-width: 530px;
+        }
+    .skillcontainer {
+        max-width: 530px;
+    }
+/* Place the timelime to the left */
+  .timeline::after {
+    left: 33px;
+  }
+
+  .containertime {
+    width: 80%;
+    padding-left: 70px;
+    padding-right: 25px;
+  }
+
+  .containertime::before {
+    left: 60px;
+    border: medium solid white;
+    border-width: 10px 10px 10px 0;
+    border-color: transparent white transparent transparent;
+  }
+
+  .timeleft::after, .timeright::after {
+    left: 15px;
+  }
+
+  .timeright {
+    left: 0%;
+  }
+  div.contacts {
+    max-width: 530px;
+        flex-direction: column;
+
+  }
+
+}
+
