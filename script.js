@@ -33,11 +33,9 @@ function setMiniMenu() {
         starman.style.marginTop = "230px";
         for (i = 0; i < mobimenu.length; i++) {
           mobimenu[i].addEventListener("click", function somehandler() {
-            var ankor = this.firstElementChild;
             for (j = 0; j < mobimenu.length; j++) {
                 if (mobimenu[j].classList.contains("active")) {
                     mobimenu[j].classList.toggle("active");
-                    mobimenu[j].firstElementChild.classList.toggle("active");
                     //console.log(mobimenu[j]);
                 };
                 if (window.innerWidth <= 600) {
@@ -45,7 +43,6 @@ function setMiniMenu() {
                     mobimenu[j].style.display = "block";
                 };
             };
-            ankor.classList.toggle("active");
             this.classList.toggle("active");
             if (window.innerWidth <= 600) {
                 //console.log("SMALL screen");

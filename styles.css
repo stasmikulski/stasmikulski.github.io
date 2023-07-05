@@ -1,6 +1,10 @@
+/* Font - Roboto */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;500&display=swap');
+
 body {
     margin: 0px;
-    font-family: sans-serif;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
     background-color: #c0f0c0;
 }
 
@@ -21,9 +25,10 @@ div.navigation {
     justify-self: stretch;
     width: 100%;
     max-width: 920px;
+    font-weight: 500;
 }
 
-div.nav-item {
+.navigation > a > div.nav-item {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -31,8 +36,9 @@ div.nav-item {
     margin: 0px;
     background-color: #108010;
     border-right: 1px solid white;
+
 }
-div.nav-item:last-of-type {
+.navigation > a:last-of-type  > div.nav-item {
     border-right: 0;
 }
 
@@ -46,27 +52,24 @@ div.mini-menu {
     background-color: #108010;
 }
 
-div.nav-item > a.a-item {
+a.a-item {
     font-size: 20px;
     color: white;
     padding: 0px 0px;
     margin: 0px;
     text-decoration: none;
 }
-div.nav-item > a.a-item.active {
-    color: #108010;
-}
 
-div.nav-item:hover {
-    background-color: #10b010;
-}
-
-div.nav-item.active {
+a.a-item > div.nav-item.active {
     padding: 10px 20px;
     margin: 0px;
     color: #108010;
     font-size: 20px;
     background-color: #c0f0c0;
+}
+
+a.a-item > div.nav-item:hover {
+    background-color: #10b010;
 }
 
 h1 {
@@ -76,6 +79,7 @@ h1 {
 
 h2 {
     font-size: 30px;
+    font-weight: 500;
     text-align: center;
     padding: 10px;
     margin: 45px 20px 0px 20px;
@@ -83,7 +87,7 @@ h2 {
 
 h3 {
     font-size: 18px;
-    font-weight: normal;
+    font-weight: 300;
     text-align: center;
     padding: 2px;
     margin: 10px 20px;
@@ -101,7 +105,6 @@ h3 {
 }
 
 .buggy-1 {
-  font-family: sans-serif;
   position: relative;
   left: 0px;
   bottom: 0px;
@@ -192,6 +195,7 @@ button.collapsible.active:after {
     color: white; /* White text color */
 }
 p.skillname {
+    font-weight: 500;
     padding-left: 20px;
 }
 
@@ -289,7 +293,7 @@ p.skillname {
     border-radius: 6px;
 }
 h4.year {
-    font-weight: normal;
+    font-weight: 500;
     font-size: 24px;
     text-align: left;
     padding: 0px;
@@ -328,14 +332,13 @@ a.con-item:hover {
     div.navigation {
         grid-template-columns: 1fr;
     }
-    div.nav-item {
+    a.a-item > div.nav-item {
         display: none;
         //display: block;
         border-right: 0;
         border-bottom: solid 1px white;
     }
-
-    div.nav-item.active {
+    a.a-item > div.nav-item.active {
         border-bottom: solid 1px #108010;
     }
     div.mini-menu {
