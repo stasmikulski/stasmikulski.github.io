@@ -329,8 +329,8 @@ a.con-item:hover {
         grid-template-columns: 1fr;
     }
     div.nav-item {
-        //display: none;
-        display: block;
+        display: none;
+        //display: block;
         border-right: 0;
         border-bottom: solid 1px white;
     }
@@ -339,8 +339,8 @@ a.con-item:hover {
         border-bottom: solid 1px #108010;
     }
     div.mini-menu {
-        display: none;
-        //display: block;
+        //display: none;
+        display: block;
     }
     h2 {
         font-size: 24px;
