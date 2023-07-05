@@ -19,6 +19,7 @@ var starman = document.getElementById("starman");
 var minimenu = document.getElementsByClassName("mini-menu")[0];
 var mobimenu = document.querySelectorAll("[class*='nav-item']")
     //console.log(mobimenu.length);
+    //console.log(mobimenu);
 if (window.innerWidth <= 600) {
     //console.log("Starting with small screen");
 }
